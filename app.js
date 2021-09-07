@@ -5,7 +5,7 @@ const cfenv = require('cfenv');
 var app  =  express(); 
 var appEnv = cfenv.getAppEnv();
 var url = process.env.url
-app.set('port', (process.env.PORT || 9981))
+app.set('port', (process.env.PORT || 8081))
 app.use(express.static(__dirname + '/images'))
 
 
@@ -70,12 +70,12 @@ app.get("/status-code-500", function(req, res) {
 
 app.get('/redirect', function(req, res) {
     //Send status 300
-        res.redirect('http://mithuntechnologies.com');
+        res.redirect('http://phanitechnologies.com');
     });
     
  
     app.listen(app.get('port'), function() {
-        console.log("Node JS app is running at http://localhost:" + app.get('port') +"/mithuntechnologies");
+        console.log("Node JS app is running at http://localhost:" + app.get('port') +"/phanitechnologies");
       })
     
 
