@@ -70,7 +70,7 @@ app.get("/status-code-500", function(req, res) {
 
 app.get('/redirect', function(req, res) {
     //Send status 300
-        res.redirect('http://Mithuntechnologies.com');
+        res.redirect('http://mithuntechnologies.com');
     });
     
  
