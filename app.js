@@ -5,7 +5,7 @@ const cfenv = require('cfenv');
 var app  =  express(); 
 var appEnv = cfenv.getAppEnv();
 var url = process.env.url
-app.set('port', (process.env.PORT || 9981))
+app.set('port', (process.env.PORT || 8081))
 app.use(express.static(__dirname + '/images'))
 
 
@@ -19,7 +19,7 @@ res.send("<h2>Welcome to Node JS express app</h2>"+appEnv.url+appEnv.port+port+p
 }).listen(9009);
 console.log(__dirname+"/images/mithunlogo.jpg");
 */
-app.get('/mithuntechnologies', function(request, response) {
+app.get('/phanitechnologies', function(request, response) {
     //response.send("<h2><center>Welcome to Node JS app</h2>");
     response.write("<h2><center><u>Node JS  Application </u></center></h2>");
 	
@@ -75,7 +75,7 @@ app.get('/redirect', function(req, res) {
     
  
     app.listen(app.get('port'), function() {
-        console.log("Node JS app is running at http://localhost:" + app.get('port') +"/mithuntechnologies");
+        console.log("Node JS app is running at http://localhost:" + app.get('port') +"/phanitechnologies");
       })
     
 
